@@ -11,4 +11,4 @@ You can also import it using the `import` feature inside your script:
 import { random } from "https://cdn.jsdelivr.net/gh/Tosoks67/Random-Number-Generator@master/random_import.js";
 ```
 
-## Do note that the `random.js` file is for the *Legacy importing* whilst the `random_import.js` is for importing inside a script (Don't mix them unless you want import errors)
+## Do note that the `random.js` file is for the *Legacy importing* whilst the `random_import.js` is for inner-script importing (Don't mix them unless you want import errors)
