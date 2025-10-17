@@ -5,10 +5,20 @@ You can import the `random` function by inputting in the `<body>` or the `<head>
 <script src="https://cdn.jsdelivr.net/gh/Tosoks67/Random-Number-Generator@master/random.js"></script>
 ```
 
-## Importing inside a module (ES6+, should work on Node.js)
-You can also import it using the `import` feature inside your module:
+## Importing inside a module (ES6+)
+Always put it at the start of the module; Use the `.mjs` format for NodeJS; Use `<script type="module">` in HTML
 ```js
 import { random } from "https://cdn.jsdelivr.net/gh/Tosoks67/Random-Number-Generator@master/random_import.js";
 ```
 
-## Do note that the `random.js` file is for the *Legacy importing* whilst the `random_import.js` is for inner-module importing (Don't mix them unless you want import errors)
+## Importing mid-script (ES6+)
+You don't need to put it at the start; It still needs a module to work so use `.mjs` / `<script type="module">`
+```js
+import("https://cdn.jsdelivr.net/gh/Tosoks67/Random-Number-Generator@master/random_import.js").then((module) => {
+    window.random = module.random;
+}).catch((error) => {
+    console.error("Error loading Random-Number-Generator:", error);
+});
+```
+
+### `random.js` is for importing using `<script>` while `random_import.js` is for module importing
