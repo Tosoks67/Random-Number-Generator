@@ -14,9 +14,11 @@ import { random } from "https://cdn.jsdelivr.net/gh/Tosoks67/Random-Number-Gener
 ## Importing mid-script (ES6+)
 You don't need to put it at the start; It still needs a module to work so use `.mjs` / `<script type="module">`
 ```js
-import("https://cdn.jsdelivr.net/gh/Tosoks67/Random-Number-Generator@master/random_import.js").then((module) => {
+import("https://cdn.jsdelivr.net/gh/Tosoks67/Random-Number-Generator@master/random_import.js")
+.then((module) => {
     window.random = module.random;
-}).catch((error) => {
+})
+.catch((error) => {
     console.error("Error loading Random-Number-Generator:", error);
 });
 ```
