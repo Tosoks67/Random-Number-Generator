@@ -1,6 +1,6 @@
 # Usage
-## Legacy importing (Should work on any version of browser JS)
-You can import the `random` function by inputting in the `<body>` or the `<head>`:
+## HTML importing
+Should work on any version of JS; input this in the `<body>` or the `<head>`:
 ```html
 <script src="https://cdn.jsdelivr.net/gh/Tosoks67/Random-Number-Generator@master/random.js"></script>
 ```
@@ -19,7 +19,7 @@ import("https://cdn.jsdelivr.net/gh/Tosoks67/Random-Number-Generator@master/rand
     window.random = module.random;
 })
 .catch((error) => {
-    console.error("Error loading Random-Number-Generator:", error);
+    console.error("Random-Number-Generator:", error);
 });
 ```
 
